@@ -520,11 +520,17 @@ class CoinDetailScreen extends StatelessWidget {
                                           Row(
                                             children: [
                                               Expanded(
-                                                child: linkLogo('assets/facebook.png'),
+                                                child: linkLogo(
+                                                  'assets/facebook.png',
+                                                  'https://www.facebook.com/'//Coin facebook link
+                                                ),
                                               ),
                                               const SizedBox(width: 10.0),
                                               Expanded(
-                                                child: linkLogo('assets/reddit-logo.png'),
+                                                child: linkLogo(
+                                                    'assets/reddit-logo.png',
+                                                  'https://www.reddit.com/'
+                                                ),
                                               ),
                                             ],
                                           ),
@@ -532,11 +538,17 @@ class CoinDetailScreen extends StatelessWidget {
                                           Row(
                                             children: [
                                               Expanded(
-                                                child: linkLogo('assets/github.png'),
+                                                child: linkLogo(
+                                                    'assets/github.png',
+                                                  'https://github.com/'
+                                                ),
                                               ),
                                               const SizedBox(width: 10.0),
                                               Expanded(
-                                                child: linkLogo('assets/globe.png'),
+                                                child: linkLogo(
+                                                    'assets/globe.png',
+                                                  ''
+                                                ),
                                               ),
                                             ],
                                           ),
@@ -544,7 +556,10 @@ class CoinDetailScreen extends StatelessWidget {
                                           Row(
                                             children: [
                                               Expanded(
-                                                child: linkLogo('assets/youtube.png'),
+                                                child: linkLogo(
+                                                    'assets/youtube.png',
+                                                  'https://www.youtube.com/'
+                                                ),
                                               ),
                                               const SizedBox(width: 10.0),
                                               Expanded(
@@ -574,7 +589,10 @@ class CoinDetailScreen extends StatelessWidget {
                                           Row(
                                             children: [
                                               Expanded(
-                                                child: linkLogo('assets/explore.png'),
+                                                child: linkLogo(
+                                                    'assets/explore.png',
+                                                  ''
+                                                ),
                                               ),
                                             ],
                                           ),

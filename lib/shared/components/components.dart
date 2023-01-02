@@ -1,6 +1,7 @@
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
 import 'package:crypto_app/modules/coinDetailScreen.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 Widget buildCoinCard(context,item,) => GestureDetector(
   onTap: (){
@@ -113,8 +114,10 @@ Widget coinListBuilder(List<dynamic> list) => ConditionalBuilder(
   fallback: (context) => const Center(child: CircularProgressIndicator()),
 );
 
-Widget linkLogo(String imageUrl) => GestureDetector(
-  onTap: (){},
+Widget linkLogo(String imageUrl,String url) => GestureDetector(
+  onTap: (){
+    _launchUrl(url);
+  },
   child: Container(
     width: 60.0,
     height: 60.0,
@@ -130,3 +133,10 @@ Widget linkLogo(String imageUrl) => GestureDetector(
     ),
   ),
 );
+
+Future<void> _launchUrl(String s) async {
+  final Uri url = Uri.parse(s);
+  if (!await launchUrl(url)) {
+    throw 'Could not launch $url';
+  }
+}
