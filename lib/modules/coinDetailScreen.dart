@@ -21,7 +21,7 @@ class CoinDetailScreen extends StatelessWidget {
       child: BlocConsumer<CoinsCubit, CoinsStates>(
          listener: (context, state) {},
           builder: (context, state) {
-            var details = CoinsCubit.get(context).coinsDetails;
+            // var details = CoinsCubit.get(context).coinsDetails;
             return Scaffold(
               appBar: AppBar(
                 title: Text(
